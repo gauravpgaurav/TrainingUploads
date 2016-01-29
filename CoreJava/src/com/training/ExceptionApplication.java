@@ -12,8 +12,14 @@ public class ExceptionApplication {
 		} 
 		
 		catch (RangeCheckException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+
+			System.out.println(e.getMessage());
 		}
+		
+		finally{
+			System.out.println("\nReached Here !\n");
+		}
+		
+		System.out.println("\nReached Bye !\n");
 	}
 }
