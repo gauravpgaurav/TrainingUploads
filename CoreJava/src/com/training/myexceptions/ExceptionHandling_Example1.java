@@ -5,10 +5,13 @@ public class ExceptionHandling_Example1 {
 	public static void main(String[] args){
 		
 		String name=null;
+		int len = 0;
 		
 		try{
 			System.out.println(args[0]);
 			System.out.println(name.length());
+			//int len = name.length();
+			len = name.length();
 		}
 		catch(ArrayIndexOutOfBoundsException e)
 		{
@@ -16,8 +19,10 @@ public class ExceptionHandling_Example1 {
 		}
 		catch(NullPointerException e)
 		{
-			System.out.println("Check Attribute-Name It mayve Null !");
+			System.out.println("Check Attribute-Name It maybe Null !");
 		}
+		
+		System.out.println(len);
 	}
 
 }
