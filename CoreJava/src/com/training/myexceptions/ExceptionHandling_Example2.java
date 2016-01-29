@@ -6,8 +6,12 @@ public class ExceptionHandling_Example2 {
 	
 		try{
 		
-			String age = "40";
+			String name = null;
+			String age = "Forty";
 			
+			
+			System.out.println(name.length());
+
 			int age2 = Integer.parseInt(age);
 			
 			System.out.println(++age2);
@@ -16,7 +20,10 @@ public class ExceptionHandling_Example2 {
 		
 		catch(NumberFormatException | NullPointerException e){
 			
-			System.out.println(e.getMessage());
+			if(e instanceof NumberFormatException)
+				System.out.println(e.getMessage()+ "Age should be integer Value");
+			else
+				System.out.println(e.getMessage()+ "Null");
 		}
 	}
 }
