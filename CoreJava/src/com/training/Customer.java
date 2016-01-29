@@ -16,12 +16,27 @@ public class Customer {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Customer(int customerId, String customerName, String email_Id, long handPhone) {
+	//Declare Rule
+	public Customer(int customerId, String customerName, String email_Id, long handPhone) throws RangeCheckException
+	{
 		super();
 		this.customerId = customerId;
 		this.customerName = customerName;
 		this.email_Id = email_Id;
-		this.handPhone = handPhone;
+		
+		if(handPhone>9999999999L || handPhone<1111111111L)
+		{
+			try {
+				throw new RangeCheckException(handPhone);
+			} catch (RangeCheckException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.getMessage());
+			}
+		}
+		else
+		{
+			this.handPhone = handPhone;
+		}
 	}
 	
 	public int getCustomerId() {
@@ -45,17 +60,24 @@ public class Customer {
 	public long getHandPhone() {
 		return handPhone;
 	}
+	
+	// Handle Rule
 	public void setHandPhone(long handPhone) {
 		
-		if(handPhone>9999999999L)
+		if(handPhone>9999999999L || handPhone<1111111111L)
 		{
-			throw new RangeCheckException(handPhone);
+			try {
+				throw new RangeCheckException(handPhone);
+			} catch (RangeCheckException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.getMessage());
+			}
 		}
 		else
 		{
-			
+			this.handPhone = handPhone;
 		}
-		this.handPhone = handPhone;
+		
 	}
 	
 	public String showCustomer(){

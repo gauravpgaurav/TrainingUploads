@@ -12,11 +12,12 @@ public class CustomerApplication {
 		cust1.setEmail_Id("gpant@sapient.com");
 		cust1.setHandPhone(974059122);
 	
-		Customer cust2 = new Customer(118580,"ABC","abc@sapient.com",997160053);
+	//	Customer cust2 = new Customer(118580,"ABC","abc@sapient.com",997160053);
 		
 		System.out.println("Customer 1 - "+cust1.showCustomer());
 		
-		System.out.println("Customer 2 - "+cust2.showCustomer());
+//		System.out.println("Customer 2 - "+cust2.showCustomer());
+		
 		
 		//GIT
 	}
