@@ -1,6 +1,6 @@
 package com.rentals;
 
-abstract public class ChennaiRentalItems {
+abstract public class RentalItems {
 	
 	private String serialNumber;
 	private String itemType;
@@ -8,7 +8,7 @@ abstract public class ChennaiRentalItems {
 	private double ratePerDay;
 	private int numberOfItems;
 	
-	public ChennaiRentalItems(String serialNumber, String itemType, double ratePerDay) {
+	public RentalItems(String serialNumber, String itemType, double ratePerDay) {
 		super();
 		this.serialNumber = serialNumber;
 		this.itemType = itemType;

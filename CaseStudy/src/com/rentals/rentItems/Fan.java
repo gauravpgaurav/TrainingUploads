@@ -1,14 +1,14 @@
 package com.rentals.rentItems;
 
-import com.rentals.ChennaiRentalItems;
+import com.rentals.RentalItems;
 
-public class Fans extends ChennaiRentalItems {
+public class Fan extends RentalItems {
 
 	private int numberOfBlades;
 	private double ratePerDay;
 
 
-	public Fans(String serialNumber, String itemType,int numberOfBlades, double ratePerDay) {		
+	public Fan(String serialNumber, String itemType,int numberOfBlades, double ratePerDay) {		
 		super(serialNumber, itemType, ratePerDay);
 		this.numberOfBlades = numberOfBlades;
 	}

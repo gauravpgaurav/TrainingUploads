@@ -1,8 +1,8 @@
 package com.rentals.rentItems;
 
-import com.rentals.ChennaiRentalItems;
+import com.rentals.RentalItems;
 
-public class AirConditioner extends ChennaiRentalItems {
+public class AirConditioner extends RentalItems {
 	private double powerRatings;
 	private double ratePerDay;
 	

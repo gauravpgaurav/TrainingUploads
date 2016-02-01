@@ -1,7 +1,7 @@
 package com.rentals;
 
 import com.rentals.rentItems.AirConditioner;
-import com.rentals.rentItems.Fans;
+import com.rentals.rentItems.Fan;
 import com.rentals.rentItems.Furniture;
 import com.rentals.rentItems.Vessels;
 import java.util.*;
@@ -10,11 +10,11 @@ public class RentApplication {
 	
 	public static void main(String[] args){
 		
-	ChennaiRentalItems[] rentObjArray = new ChennaiRentalItems[6];
+	RentalItems[] rentObjArray = new RentalItems[6];
 	
-	rentObjArray[0] = new Fans("FAN101", "Fan",3,120);
+	rentObjArray[0] = new Fan("FAN101", "Fan",3,120);
 	rentObjArray[1] = new AirConditioner("AC102", "AC",3.5,700);
-	rentObjArray[2] = new Fans("FAN102", "Fan",4,170);
+	rentObjArray[2] = new Fan("FAN102", "Fan",4,170);
 	rentObjArray[3] = new Vessels("VES101", "Vessels","Stainless Steel",60);
 	rentObjArray[4] = new Furniture("FUR103", "Furniture","Chair",130);
 	rentObjArray[5] = new Vessels("VES104", "Vessels","Ceramic",120);
@@ -58,7 +58,7 @@ public class RentApplication {
 			System.out.print("\nExited ! \n\n******** Total Amount = Rs."+totalAmount + " ********");
 			System.exit(0);
 		}
-		for(ChennaiRentalItems i : rentObjArray)
+		for(RentalItems i : rentObjArray)
 		{
 			if(serialNumber.equals(i.getSerialNumber()))
 			{
@@ -93,6 +93,6 @@ public class RentApplication {
 					System.out.print("*");
 				System.out.println();
 			}
-	}
+	}sc.close();
 	}
 }

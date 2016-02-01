@@ -1,8 +1,8 @@
 package com.rentals.rentItems;
 
-import com.rentals.ChennaiRentalItems;
+import com.rentals.RentalItems;
 
-public class Vessels extends ChennaiRentalItems {
+public class Vessels extends RentalItems {
 	private String material;
 	private double ratePerDay;
 	
