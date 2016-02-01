@@ -6,7 +6,7 @@ public class TaxWhiz {
 	double salesTax;
 	
 	TaxWhiz(double currentTaxRate){
-		
+		super();
 		this.currentTaxRate = currentTaxRate;
 	}
 	
