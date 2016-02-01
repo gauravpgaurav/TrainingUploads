@@ -10,34 +10,69 @@ public class RentApplication {
 	
 	public static void main(String[] args){
 		
-	ChennaiRentals[] rentObjArray = new ChennaiRentals[4];
+	ChennaiRentals[] rentObjArray = new ChennaiRentals[6];
 	
-	rentObjArray[0] = new Fans("FAN101", "Fan", 3);
-	rentObjArray[1] = new AirConditioner("AC102", "AC", 3.5);
-	rentObjArray[2] = new Furniture("FUR103", "Furniture", 7);
-	rentObjArray[3] = new Vessels("VES104", "Vessels", "Stainless Steel");
+	rentObjArray[0] = new Fans("FAN101", "Fan",3,120);
+	rentObjArray[1] = new AirConditioner("AC102", "AC",3.5,700);
+	rentObjArray[2] = new Fans("FAN102", "Fan",4,170);
+	rentObjArray[3] = new Vessels("VES101", "Vessels","Stainless Steel",60);
+	rentObjArray[4] = new Furniture("FUR103", "Furniture","Chair",130);
+	rentObjArray[5] = new Vessels("VES104", "Vessels","Ceramic",120);
 	
 	Scanner sc = new Scanner(System.in);
-	String serialNumber;
+	String serialNumber = "";
 	int flag=0;
+	int itemCount, numberofDays;
+	double totalAmount=0, currentAmount=0;
 	
 	System.out.println();
-	System.out.println("\n\n******** CHENNAI RENTALS ********");
-	System.out.print("\n\nEnter Serial Number : ");
-	serialNumber = sc.next();
-	
-	for(ChennaiRentals i : rentObjArray)
+	System.out.println("\n******** CHENNAI RENTALS ********");
+	while(!serialNumber.equals("Exit"))
 	{
-		if(serialNumber.equals(i.getSerialNumber()))
+		currentAmount = 0;
+		
+		System.out.print("\nEnter Serial Number (Type 'Exit' to Exit) : ");
+		serialNumber = sc.next();
+		if(serialNumber.equals("Exit"))
 		{
-			i.getItemDetails();
-			flag=1;
-			break;
+			System.out.print("\nExited ! \n\n******** Total Amount = Rs."+totalAmount + " ********");
+			System.exit(0);
 		}
-	}	
-		if(flag==0)
-			
-			System.out.println("\n\tERROR : No Item Found with Serial Number = "+serialNumber+" !!\n");
-	
+		for(ChennaiRentals i : rentObjArray)
+		{
+			if(serialNumber.equals(i.getSerialNumber()))
+			{
+				i.getItemDetails();
+				flag=1;
+				System.out.print("\nEnter Number of items : \t");
+				itemCount = sc.nextInt();
+				i.setNumberOfItems(itemCount);
+				System.out.print("Enter Number of Days  : \t");
+				numberofDays = sc.nextInt();
+				i.setRentDays(numberofDays);
+				
+				currentAmount = i.calculateRent();
+				totalAmount+=currentAmount;
+				System.out.println("\n");
+				for(int j=0; j<50; j++)
+					System.out.print("*");
+				System.out.println();
+				System.out.println("\n\tCurrent Amount \t= Rs."+currentAmount);
+				System.out.println("\tTotal Amount \t= Rs."+totalAmount);
+				System.out.println("\n");
+				for(int j=0; j<50; j++)
+					System.out.print("*");
+				System.out.println();
+			}
+		}	
+			if(flag==0)
+			{
+				System.out.println("\n\tERROR : No Item Found with Serial Number = "+serialNumber+" !!\n");
+				System.out.println();
+				for(int j=0; j<50; j++)
+					System.out.print("*");
+				System.out.println();
+			}
+	}
 	}
 }

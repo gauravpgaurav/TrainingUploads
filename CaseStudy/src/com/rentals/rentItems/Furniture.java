@@ -4,16 +4,23 @@ import com.rentals.ChennaiRentals;
 
 public class Furniture extends ChennaiRentals {
 
-	private int numberOfPieces;
-
-	public Furniture(String serialNumber,String itemType, int numberOfPieces) {
-		super(serialNumber,itemType);
-		this.numberOfPieces = numberOfPieces;
-	}
+	private String furnitureType;
+	private double ratePerDay;
 	
+
+	public Furniture(String serialNumber, String itemType,String furnitureType, double ratePerDay) {
+		super(serialNumber, itemType, ratePerDay);
+		this.furnitureType = furnitureType;
+	}
+
 	public void getItemDetails(){
 		
 		super.getItemDetails();
-		System.out.println("\nNumber of Pieces : \t"+numberOfPieces);
+		System.out.println("Furniture Type : \t"+furnitureType);
+		System.out.println();
+		for(int j=0; j<50; j++)
+			System.out.print("*");
+		System.out.println();
+
 	}
 }
