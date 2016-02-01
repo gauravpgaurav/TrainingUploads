@@ -1,4 +1,5 @@
 package com.rentals;
+import java.util.*;
 
 abstract public class RentalItems {
 	
@@ -7,6 +8,7 @@ abstract public class RentalItems {
 	private int rentDays;
 	private double ratePerDay;
 	private int numberOfItems;
+	
 	
 	public RentalItems(String serialNumber, String itemType, double ratePerDay) {
 		super();
@@ -39,6 +41,17 @@ abstract public class RentalItems {
 		this.numberOfItems = numberOfItems;
 	}
 
+	public void setItemDetails()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("\nEnter Number of items : \t");
+		int itemCount = sc.nextInt();
+		setNumberOfItems(itemCount);
+		System.out.print("Enter Number of Days  : \t");
+		int numberofDays = sc.nextInt();
+		setRentDays(numberofDays);
+		
+	}
 	public void getItemDetails(){
 		
 		System.out.println("\nSerial Number : \t"+serialNumber);

@@ -6,8 +6,10 @@ import com.rentals.rentItems.Furniture;
 import com.rentals.rentItems.Vessels;
 import java.util.*;
 
+
 public class RentApplication {
 	
+
 	public static void main(String[] args){
 		
 	RentalItems[] rentObjArray = new RentalItems[6];
@@ -28,10 +30,7 @@ public class RentApplication {
 	System.out.println();
 	System.out.println("\n******** CHENNAI RENTALS ********");
 	
-	System.out.println();
-	for(int j=0; j<50; j++)
-		System.out.print("*");
-	System.out.println();
+	printLine();
 	
 	
 	while(!serialNumber.equals("Exit"))
@@ -46,10 +45,7 @@ public class RentApplication {
 					System.out.println();
 		}
 		
-		System.out.println();
-		for(int j=0; j<50; j++)
-			System.out.print("*");
-		System.out.println();
+		printLine();
 		
 		System.out.print("\nEnter Serial Number (Type 'Exit' to Exit) : ");
 		serialNumber = sc.next();
@@ -63,36 +59,33 @@ public class RentApplication {
 			if(serialNumber.equals(i.getSerialNumber()))
 			{
 				i.getItemDetails();
-				flag=1;
-				System.out.print("\nEnter Number of items : \t");
-				itemCount = sc.nextInt();
-				i.setNumberOfItems(itemCount);
-				System.out.print("Enter Number of Days  : \t");
-				numberofDays = sc.nextInt();
-				i.setRentDays(numberofDays);
+				flag=1;	
 				
 				currentAmount = i.calculateRent();
 				totalAmount+=currentAmount;
-				System.out.println("\n");
-				for(int j=0; j<50; j++)
-					System.out.print("*");
-				System.out.println();
+				
+				printLine();
+				
 				System.out.println("\n\tCurrent Amount \t= Rs."+currentAmount);
 				System.out.println("\tTotal Amount \t= Rs."+totalAmount);
-				System.out.println("\n");
-				for(int j=0; j<50; j++)
-					System.out.print("*");
-				System.out.println();
+				
+				printLine();
 			}
 		}	
 			if(flag==0)
 			{
 				System.out.println("\n\tERROR : No Item Found with Serial Number = "+serialNumber+" !!\n");
-				System.out.println();
-				for(int j=0; j<50; j++)
-					System.out.print("*");
-				System.out.println();
+				printLine();
 			}
 	}sc.close();
 	}
+	
+	public static void printLine()
+	{
+		System.out.println("\n");
+		for(int j=0; j<50; j++)
+			System.out.print("*");
+		System.out.println();
+	}
+	
 }
