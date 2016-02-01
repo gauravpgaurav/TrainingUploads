@@ -50,7 +50,7 @@ abstract public class RentalItems {
 		System.out.print("Enter Number of Days  : \t");
 		int numberofDays = sc.nextInt();
 		setRentDays(numberofDays);
-		
+		sc.close();
 	}
 	public void getItemDetails(){
 		

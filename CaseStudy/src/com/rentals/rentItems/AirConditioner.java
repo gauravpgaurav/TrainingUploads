@@ -3,9 +3,8 @@ package com.rentals.rentItems;
 import com.rentals.RentalItems;
 
 public class AirConditioner extends RentalItems {
-	private double powerRatings;
-	private double ratePerDay;
 	
+	private double powerRatings;
 	
 	public AirConditioner(String serialNumber, String itemType, double powerRatings, double ratePerDay) {
 		super(serialNumber, itemType, ratePerDay);

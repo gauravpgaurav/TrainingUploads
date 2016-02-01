@@ -4,7 +4,6 @@ import com.rentals.RentalItems;
 
 public class Vessels extends RentalItems {
 	private String material;
-	private double ratePerDay;
 	
 	public Vessels(String serialNumber, String itemType, String material, double ratePerDay) {
 		super(serialNumber, itemType, ratePerDay);

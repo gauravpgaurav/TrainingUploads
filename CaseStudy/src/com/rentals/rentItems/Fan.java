@@ -5,7 +5,6 @@ import com.rentals.RentalItems;
 public class Fan extends RentalItems {
 
 	private int numberOfBlades;
-	private double ratePerDay;
 
 
 	public Fan(String serialNumber, String itemType,int numberOfBlades, double ratePerDay) {		

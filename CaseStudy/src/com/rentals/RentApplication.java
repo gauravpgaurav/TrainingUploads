@@ -24,7 +24,6 @@ public class RentApplication {
 	Scanner sc = new Scanner(System.in);
 	String serialNumber = "";
 	int flag=0;
-	int itemCount, numberofDays;
 	double totalAmount=0, currentAmount=0;
 	
 	System.out.println();

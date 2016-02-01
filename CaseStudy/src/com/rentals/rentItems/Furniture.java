@@ -5,9 +5,7 @@ import com.rentals.RentalItems;
 public class Furniture extends RentalItems {
 
 	private String furnitureType;
-	private double ratePerDay;
 	
-
 	public Furniture(String serialNumber, String itemType,String furnitureType, double ratePerDay) {
 		super(serialNumber, itemType, ratePerDay);
 		this.furnitureType = furnitureType;
