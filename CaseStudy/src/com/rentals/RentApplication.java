@@ -39,10 +39,10 @@ public class RentApplication {
 		currentAmount = 0;
 		flag=0;
 		
-		for(int j=1;j<=5;j++)
+		for(int j=0;j<=5;j++)
 		{
 			System.out.print("\t"+rentObjArray[j].getSerialNumber());
-				if(j%3==0)
+				if((j+1)%3==0)
 					System.out.println();
 		}
 		
