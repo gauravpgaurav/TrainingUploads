@@ -1,8 +1,8 @@
 package com.rentals.rentItems;
 
-import com.rentals.ChennaiRentals;
+import com.rentals.ChennaiRentalItems;
 
-public class AirConditioner extends ChennaiRentals {
+public class AirConditioner extends ChennaiRentalItems {
 	private double powerRatings;
 	private double ratePerDay;
 	
@@ -12,7 +12,7 @@ public class AirConditioner extends ChennaiRentals {
 		this.powerRatings = powerRatings;
 	}
 
-
+	@Override
 	public void getItemDetails(){
 		
 		super.getItemDetails();

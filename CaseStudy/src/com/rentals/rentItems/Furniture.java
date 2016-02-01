@@ -1,8 +1,8 @@
 package com.rentals.rentItems;
 
-import com.rentals.ChennaiRentals;
+import com.rentals.ChennaiRentalItems;
 
-public class Furniture extends ChennaiRentals {
+public class Furniture extends ChennaiRentalItems {
 
 	private String furnitureType;
 	private double ratePerDay;
@@ -12,7 +12,8 @@ public class Furniture extends ChennaiRentals {
 		super(serialNumber, itemType, ratePerDay);
 		this.furnitureType = furnitureType;
 	}
-
+	
+	@Override
 	public void getItemDetails(){
 		
 		super.getItemDetails();

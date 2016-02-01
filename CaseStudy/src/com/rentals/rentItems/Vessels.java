@@ -1,8 +1,8 @@
 package com.rentals.rentItems;
 
-import com.rentals.ChennaiRentals;
+import com.rentals.ChennaiRentalItems;
 
-public class Vessels extends ChennaiRentals {
+public class Vessels extends ChennaiRentalItems {
 	private String material;
 	private double ratePerDay;
 	
@@ -11,7 +11,7 @@ public class Vessels extends ChennaiRentals {
 		this.material = material;
 	}
 
-
+	@Override
 	public void getItemDetails(){
 		
 		super.getItemDetails();

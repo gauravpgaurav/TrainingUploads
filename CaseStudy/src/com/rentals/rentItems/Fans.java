@@ -1,8 +1,8 @@
 package com.rentals.rentItems;
 
-import com.rentals.ChennaiRentals;
+import com.rentals.ChennaiRentalItems;
 
-public class Fans extends ChennaiRentals {
+public class Fans extends ChennaiRentalItems {
 
 	private int numberOfBlades;
 	private double ratePerDay;
@@ -13,7 +13,7 @@ public class Fans extends ChennaiRentals {
 		this.numberOfBlades = numberOfBlades;
 	}
 
-
+	@Override
 	public void getItemDetails(){
 		
 		super.getItemDetails();

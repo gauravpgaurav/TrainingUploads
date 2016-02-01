@@ -10,7 +10,7 @@ public class RentApplication {
 	
 	public static void main(String[] args){
 		
-	ChennaiRentals[] rentObjArray = new ChennaiRentals[6];
+	ChennaiRentalItems[] rentObjArray = new ChennaiRentalItems[6];
 	
 	rentObjArray[0] = new Fans("FAN101", "Fan",3,120);
 	rentObjArray[1] = new AirConditioner("AC102", "AC",3.5,700);
@@ -58,7 +58,7 @@ public class RentApplication {
 			System.out.print("\nExited ! \n\n******** Total Amount = Rs."+totalAmount + " ********");
 			System.exit(0);
 		}
-		for(ChennaiRentals i : rentObjArray)
+		for(ChennaiRentalItems i : rentObjArray)
 		{
 			if(serialNumber.equals(i.getSerialNumber()))
 			{
