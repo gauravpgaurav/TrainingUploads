@@ -15,49 +15,29 @@ abstract public class ChennaiRentals {
 		this.ratePerDay = ratePerDay;
 	}
 
-
-
 	public String getSerialNumber() {
 		return serialNumber;
 	}
-
-
-
 
 	public void setSerialNumber(String serialNumber) {
 		this.serialNumber = serialNumber;
 	}
 
-
-
-
 	public int getRentDays() {
 		return rentDays;
 	}
-
-
-
 
 	public void setRentDays(int rentDays) {
 		this.rentDays = rentDays;
 	}
 
-
-
-
 	public int getNumberOfItems() {
 		return numberOfItems;
 	}
 
-
-
-
 	public void setNumberOfItems(int numberOfItems) {
 		this.numberOfItems = numberOfItems;
 	}
-
-
-
 
 	public void getItemDetails(){
 		

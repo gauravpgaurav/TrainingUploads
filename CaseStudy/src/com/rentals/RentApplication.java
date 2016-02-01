@@ -27,9 +27,29 @@ public class RentApplication {
 	
 	System.out.println();
 	System.out.println("\n******** CHENNAI RENTALS ********");
+	
+	System.out.println();
+	for(int j=0; j<50; j++)
+		System.out.print("*");
+	System.out.println();
+	
+	
 	while(!serialNumber.equals("Exit"))
 	{
 		currentAmount = 0;
+		flag=0;
+		
+		for(int j=1;j<=5;j++)
+		{
+			System.out.print("\t"+rentObjArray[j].getSerialNumber());
+				if(j%3==0)
+					System.out.println();
+		}
+		
+		System.out.println();
+		for(int j=0; j<50; j++)
+			System.out.print("*");
+		System.out.println();
 		
 		System.out.print("\nEnter Serial Number (Type 'Exit' to Exit) : ");
 		serialNumber = sc.next();
