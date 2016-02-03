@@ -37,7 +37,7 @@ public class BookManager {
 			
 			finally{
 				out.close(); 
-				return "Exiting addBooks";
+				return "bookDatabase.txt";
 			}
 		
 	}

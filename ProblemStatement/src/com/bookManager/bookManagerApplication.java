@@ -13,10 +13,8 @@ public class bookManagerApplication {
 		bookInsArray[0] =  new Book(101, "Java", "Schmidt", 500);
 		bookInsArray[1] =  new Book(102, "C++", "Mark", 250);
 		bookInsArray[2] =  new Book(103, "Python", "Abc", 700);
-		
-		System.out.println(bookManagerIns.addBooks(bookInsArray));
-		
-		File databaseFile = new File("bookDatabase.txt");
+	
+		File databaseFile = new File(bookManagerIns.addBooks(bookInsArray));
 		bookManagerIns.printBooks(databaseFile);
 		
 	}
