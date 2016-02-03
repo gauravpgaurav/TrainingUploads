@@ -1,7 +1,5 @@
 package com.training;
 
-import javax.swing.SingleSelectionModel;
-
 public class YourThread implements Runnable {
 
 	private double i;
