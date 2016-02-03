@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class Book implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 18L;
 	private int bookNumber;
 	private String bookName;
 	private String author;
@@ -13,11 +17,13 @@ public class Book implements Serializable{
 	public Book() {
 		
 		super();
-		System.out.println("Book Initialized");
+		System.out.println("Book Initialized from Superclass");
 	}
 	
 	public Book(int bookNumber, String bookName, String author, double price) {
 		super();
+		
+		System.out.println("Book Initialized using Fields ");
 		this.bookNumber = bookNumber;
 		this.bookName = bookName;
 		this.author = author;
@@ -51,7 +57,7 @@ public class Book implements Serializable{
 	@Override
 	public String toString() {
 		
-		return bookNumber + " : " + bookName + " : " + author ;
+		return bookNumber + " : " + bookName + " : " + author + " : " + price ;
 	}
 	
 	
