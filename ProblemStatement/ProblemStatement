@@ -1,0 +1,14 @@
+Create a java class book which implements Serialible interface
+
+with
+
+bookNumber;
+bookName;
+author;
+price;
+
+mark the field price as transient
+
+Provide Zero and parameterized consrructor, Set/get Methods
+
+Override toString()
