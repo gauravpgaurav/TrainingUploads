@@ -12,3 +12,12 @@ mark the field price as transient
 Provide Zero and parameterized consrructor, Set/get Methods
 
 Override toString()
+
+----------------------------------------------------------------
+
+Create a Java Class BookManager with two methods
+
+public String addBooks(Book[] bks)
+public void printBooks(File fileName)
+
+Create an Application to Test
