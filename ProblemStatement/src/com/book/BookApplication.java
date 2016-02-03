@@ -11,11 +11,17 @@ public class BookApplication {
 		
 		BookSerializer serializeIns = new BookSerializer();
 		
-		serializeIns.serialize(bookIns);
+		String message = serializeIns.serialize(bookIns);
 		
-		bookIns2 = (Book)serializeIns.deSerialize();
+		if(message!=null)
+			{
+				System.out.println(message);
+				bookIns2 = (Book)serializeIns.deSerialize();
+				System.out.println(bookIns2.toString());
+			}
 		
-		System.out.println(bookIns2.toString());
+		else
+			System.out.println(message);
 		
 	}
 
