@@ -14,7 +14,7 @@ public class bookManagerApplication {
 		bookInsArray[1] =  new Book(102, "C++", "Mark", 250);
 		bookInsArray[2] =  new Book(103, "Python", "Abc", 700);
 		
-		bookManagerIns.addBooks(bookInsArray);
+		System.out.println(bookManagerIns.addBooks(bookInsArray));
 		
 		File databaseFile = new File("bookDatabase.txt");
 		bookManagerIns.printBooks(databaseFile);

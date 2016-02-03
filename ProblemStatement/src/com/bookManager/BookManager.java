@@ -16,8 +16,7 @@ public class BookManager {
 	public String addBooks(Book[] bks){
 		
 		PrintWriter out = null;
-		if(bks.length>0)
-		{
+		
 			try {
 				out = new PrintWriter(new FileWriter("bookDatabase.txt"));
 
@@ -31,37 +30,41 @@ public class BookManager {
 				
 			}
 		
-			catch (IOException e) { }
+			catch (IOException e) 
+			{ 
+				System.out.println(e.getMessage());
+			}
 			
 			finally{
 				out.close(); 
-				return "Array Not Empty";
+				return "Exiting addBooks";
 			}
-		}
 		
-		else
-			
-			return "Empty Array";
 	}
 	
 	public void printBooks(File filename){
 		
 		try { 
-			FileReader fr = new FileReader("bookDatabase.txt");
+			FileReader fr = new FileReader(filename);
 			BufferedReader br = new BufferedReader(fr); 
 			String line=null;
 		
 			try
 		{ 
 				while(( line=br.readLine()) !=null) 
-				{ System.out.println(line); 
+				{ 
+					System.out.println(line); 
 				} 
 		} 
 			catch (IOException e) 
-			{ e.printStackTrace(); } 
+			{ 
+				System.out.println(e.getMessage());
+			} 
 		}	
 		
 		catch (FileNotFoundException e) 
-		{ e.printStackTrace(); }
+		{ 
+			System.out.println(e.getMessage()); 
+		}
 	}
 }
