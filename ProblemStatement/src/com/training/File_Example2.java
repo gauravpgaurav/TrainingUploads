@@ -6,7 +6,7 @@ public class File_Example2 {
 	public static void main(String[] args){
 		
 	File dir = new File(".");
-	String[] files = dir.list();
+	//String[] files = dir.list();
 	File[] fileList = dir.listFiles();
 	
 	for(File fileIns : fileList)
