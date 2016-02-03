@@ -1,10 +1,6 @@
 package com.book.domains;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 import com.book.Book;
 
@@ -17,6 +13,9 @@ public class BookSerializer {
 		
 		try {
 			 out = new ObjectOutputStream(new FileOutputStream(new File("Book.ser")));
+			 out.writeObject(obj);
+			 
+			 message = "One Object Serialized - Press F5 to view File";
 		} 
 
 		catch (IOException e) {
@@ -38,6 +37,16 @@ public class BookSerializer {
 	public Object deSerialize(){
 		
 		Object obj = null;
+		
+
+		try(ObjectInputStream oin = new ObjectInputStream(new FileInputStream(new File("Book.ser")));)
+		{
+			obj = oin.readObject();
+		}
+		catch(ClassNotFoundException | IOException e)
+		{
+			e.printStackTrace();
+		}
 		return obj;
 		
 	}

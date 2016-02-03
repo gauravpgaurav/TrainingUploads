@@ -51,7 +51,7 @@ public class Book implements Serializable{
 	@Override
 	public String toString() {
 		
-		return bookNumber + " : " + bookNumber + " : " + author ;
+		return bookNumber + " : " + bookName + " : " + author ;
 	}
 	
 	
