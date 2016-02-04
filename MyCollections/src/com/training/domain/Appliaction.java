@@ -14,6 +14,9 @@ public class Appliaction {
 		nursingIns.addDoctor(doc2);
 		nursingIns.addDoctor(doc3);
 		
+		System.out.println("Unsorted List :");
 		nursingIns.printDoctorList();
+		System.out.println("\nSorted List :");
+		nursingIns.printSortedDoctorList();
 	}
 }
