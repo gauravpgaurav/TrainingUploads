@@ -1,7 +1,6 @@
 package com.training.domain;
 
-import java.util.Hashtable;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Doctor implements Comparable<Doctor> {
 
