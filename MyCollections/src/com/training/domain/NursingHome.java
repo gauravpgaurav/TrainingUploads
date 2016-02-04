@@ -30,6 +30,8 @@ public class NursingHome {
 	public void printSortedDoctorList(){
 		
 		Collections.sort(doctorList);
+		
+		// Reusing Print Function - I am the OOP Programmer
 		printDoctorList();
 		
 	}
