@@ -1,5 +1,6 @@
 package com.training.domain;
 
+import java.util.Hashtable;
 import java.util.TreeSet;
 
 public class Doctor implements Comparable<Doctor> {
@@ -10,6 +11,10 @@ public class Doctor implements Comparable<Doctor> {
 
 	private TreeSet<Patient> patients;
 
+	// Home Work
+	//private Hashtable<String, LabTest> tests;
+	// 101 Blood test 200
+	
 	public Doctor() {
 		super();
 		// TODO Auto-generated constructor stub
