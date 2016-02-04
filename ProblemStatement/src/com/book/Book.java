@@ -4,9 +4,7 @@ import java.io.Serializable;
 
 public class Book implements Serializable{
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 18L;
 	private int bookNumber;
 	private String bookName;
