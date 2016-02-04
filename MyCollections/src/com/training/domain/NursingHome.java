@@ -42,7 +42,8 @@ public class NursingHome {
 		
 	}
 	
-	public void printSortedList(int i){
+	//Overloaded Method
+	public void printSortedDoctorList(int i){
 		
 		MyComparators comp = new MyComparators();
 		

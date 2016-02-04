@@ -19,20 +19,30 @@ public class Application {
 		nursingIns.addDoctor(doc2);
 		nursingIns.addDoctor(doc3);
 		
-//		System.out.println("Unsorted List :");
-//		nursingIns.printDoctorList();
-//		System.out.println("\nSorted List :");
-//		nursingIns.printSortedDoctorList();
+		System.out.println("Unsorted List :");
+		nursingIns.printDoctorList();
 		
 		Scanner sc = new Scanner(System.in);
+		int opt = 0;
 		
-		System.out.println("Choose Option : -\n");
+		while(opt!=4){
+			
+		System.out.println("\nChoose Option : -");
 		System.out.println("1. ID");
 		System.out.println("2. Name");
 		System.out.println("3. Specialization");
-		System.out.println("Enter:\t");
-		int opt = sc.nextInt();
+		System.out.println("4. Exit");
+		System.out.print("\nEnter:\t");
+		opt = sc.nextInt();
 		
-		nursingIns.printSortedList(opt);
+		if(opt==4)
+			break;
+		
+		System.out.println("\nSorted List :");
+		nursingIns.printSortedDoctorList(opt);
+		
+		}
+		System.out.println("\nExited !");
+		sc.close();
 	}
 }
