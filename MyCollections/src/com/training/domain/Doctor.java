@@ -1,10 +1,13 @@
 package com.training.domain;
 
-public class Doctor {
+public class Doctor implements Comparable<Doctor>{
 
+	
+	
 	private long doctorId;
 	private String doctorName;
 	private String specialization;
+	
 	
 	public Doctor() {
 		super();
@@ -48,5 +51,12 @@ public class Doctor {
 				+ "]";
 	}
 	
+	@Override
+	public int compareTo(Doctor o) {
+		if(doctorId<o.doctorId)	return -1;
+		if(doctorId>o.doctorId) return 1;
+		return 0;
+	}
+
 	
 }

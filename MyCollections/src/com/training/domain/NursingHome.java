@@ -29,20 +29,8 @@ public class NursingHome {
 	
 	public void printSortedDoctorList(){
 		
-		ArrayList<String> nameList = new ArrayList<String>();
+		Collections.sort(doctorList);
+		printDoctorList();
 		
-		for(Doctor doc : doctorList){
-			nameList.add(doc.getDoctorName());
-		}
-		
-		Collections.sort(nameList);
-	
-		for(String name : nameList)
-		{
-			for(Doctor doc : doctorList){
-				if(name.equals(doc.getDoctorName()))
-					System.out.println(doc);
-			}
-		}
 	}
 }

@@ -6,9 +6,9 @@ public class Appliaction {
 		
 		NursingHome nursingIns = new NursingHome();
 		
-		Doctor doc1 = new Doctor(101, "Ramesh", "Anaesthesia");
+		Doctor doc1 = new Doctor(107, "Ramesh", "Anaesthesia");
 		Doctor doc2 = new Doctor(102, "Suresh", "Oncology");
-		Doctor doc3 = new Doctor(103, "Cadbury", "ENT");
+		Doctor doc3 = new Doctor(100, "Cadbury", "ENT");
 		
 		nursingIns.addDoctor(doc1);
 		nursingIns.addDoctor(doc2);
