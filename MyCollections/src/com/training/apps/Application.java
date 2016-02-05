@@ -20,11 +20,11 @@ public class Application {
 		nursingIns.addDoctor(doc2);
 		nursingIns.addDoctor(doc3);
 
-		Patient pat1 = new Patient(901, "Gaurav", 9822822);
+		Patient pat1 = new Patient(907, "Gaurav", 9822822);
 		Patient pat2 = new Patient(902, "Saurav", 9782410);
-		Patient pat3 = new Patient(903, "Alfred", 9982321);
+		Patient pat3 = new Patient(900, "Alfred", 9982321);
 		// Duplicate Value
-		Patient pat4 = new Patient(903, "Alfred", 9982321);
+		Patient pat4 = new Patient(900, "Alfred", 9982321);
 
 		TreeSet<Patient> patients = new TreeSet<Patient>();
 
