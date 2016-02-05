@@ -17,12 +17,10 @@ public class CurrencyApplication {
 		System.out.print("Enter Dollar Amount : \t");
 		double dlrAmt = sc.nextDouble();
 
-		System.out.print("\n\nINR Amount : \t");
-
 		CurrencyConverter currencyConv = (double d) -> {
 			return d * 67.62;
 		};
-		System.out.println(currencyConv.dollarToInr(dlrAmt));
+		System.out.println("\n\nINR Amount : \t" + currencyConv.dollarToInr(dlrAmt));
 
 		for (int i = 0; i < 45; i++)
 			System.out.print("*");
