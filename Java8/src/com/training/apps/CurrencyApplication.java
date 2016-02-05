@@ -16,6 +16,7 @@ public class CurrencyApplication {
 
 		System.out.print("Enter Dollar Amount : \t");
 		double dlrAmt = sc.nextDouble();
+		sc.close();
 
 		CurrencyConverter currencyConv = (double d) -> {
 			return d * 67.62;
@@ -26,5 +27,6 @@ public class CurrencyApplication {
 			System.out.print("*");
 
 		System.out.println();
+
 	}
 }
