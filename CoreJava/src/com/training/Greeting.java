@@ -2,8 +2,8 @@ package com.training;
 
 public class Greeting {
 
-	public String getMessage(){
-		
+	public String getMessage() {
+
 		return "Welcome Back";
 	}
 }

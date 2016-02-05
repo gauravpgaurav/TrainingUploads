@@ -4,5 +4,5 @@ package com.training.ifaces;
 public interface Greeting {
 
 	public void show();
-	
+
 }

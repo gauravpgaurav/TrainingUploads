@@ -19,6 +19,5 @@ public class RangeCheckException extends Exception {
 		// TODO Auto-generated method stub
 		return handPhone + " should be in the range (ie. 10 Digits only) !";
 	}
-	
-	
+
 }

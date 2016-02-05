@@ -6,9 +6,9 @@ import com.mediaLibrary.mediaTypes.Periodical;
 import java.util.*;
 
 public class MediaApplication {
-	
-	public static void main(String[] args){
-		
+
+	public static void main(String[] args) {
+
 		Media[] mediaInsArray = new Media[4];
 		mediaInsArray[0] = new Book("Eragon", 3.8, 14, "Elliot", "Fiction", "11003443");
 		mediaInsArray[1] = new Book("Steve Jobs", 4.8, 14, "Issac", "Biography", "11012312");
@@ -16,18 +16,17 @@ public class MediaApplication {
 		mediaInsArray[3] = new DVD("Interstellar", 5.0, 21, "Sci-Fi", 148);
 		Scanner sc = new Scanner(System.in);
 		int optionNumber;
-		
+
 		System.out.println("\n\n******** MEDIA LIBRARY ********");
 		System.out.println("\n\tDisplay details of :-");
 		System.out.println("\t1. Books");
 		System.out.println("\t2. Periodicals");
 		System.out.println("\t3. DVDs\n");
 		System.out.print("Enter Option Number : ");
-		
+
 		optionNumber = sc.nextInt();
-		
-		switch(optionNumber)
-		{
+
+		switch (optionNumber) {
 		case 1:
 			mediaInsArray[0].showDetails();
 			mediaInsArray[1].showDetails();
@@ -42,7 +41,7 @@ public class MediaApplication {
 			System.out.println("\n\tERROR : Incorrect Input !!\n");
 			break;
 		}
-		
+
 		sc.close();
 	}
 

@@ -1,15 +1,15 @@
 package com.rentals;
+
 import java.util.*;
 
 abstract public class RentalItems {
-	
+
 	private String serialNumber;
 	private String itemType;
 	private int rentDays;
 	private double ratePerDay;
 	private int numberOfItems;
-	
-	
+
 	public RentalItems(String serialNumber, String itemType, double ratePerDay) {
 		super();
 		this.serialNumber = serialNumber;
@@ -41,8 +41,7 @@ abstract public class RentalItems {
 		this.numberOfItems = numberOfItems;
 	}
 
-	public void setItemDetails()
-	{
+	public void setItemDetails() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("\nEnter Number of items : \t");
 		int itemCount = sc.nextInt();
@@ -52,13 +51,13 @@ abstract public class RentalItems {
 		setRentDays(numberofDays);
 		sc.close();
 	}
-	public void getItemDetails(){
-		
-		System.out.println("\nSerial Number : \t"+serialNumber);
-		System.out.println("Item Type : \t\t"+itemType);
-		System.out.println("Rate Per Day : \t\t"+ratePerDay);
+
+	public void getItemDetails() {
+
+		System.out.println("\nSerial Number : \t" + serialNumber);
+		System.out.println("Item Type : \t\t" + itemType);
+		System.out.println("Rate Per Day : \t\t" + ratePerDay);
 	}
-	
 
 	public double calculateRent() {
 		return rentDays * ratePerDay * numberOfItems;

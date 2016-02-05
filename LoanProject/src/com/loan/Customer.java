@@ -21,8 +21,9 @@ public class Customer {
 		super();
 		this.customerName = customerName;
 	}
-	 public String displayCustomerDetails(){
-		 return customerName;
-	 }
-	
+
+	public String displayCustomerDetails() {
+		return customerName;
+	}
+
 }

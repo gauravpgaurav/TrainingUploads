@@ -1,15 +1,15 @@
 package com.insurance;
 
 public class LifeInsurance {
-	
+
 	private long policyNumber;
 	private String policyHolderName;
 	private String paymentMode;
 	private double policyAmount;
-	
-	public double calculatePremium(){
-		
-		return policyAmount*(0.1);
+
+	public double calculatePremium() {
+
+		return policyAmount * (0.1);
 	}
 
 	public long getPolicyNumber() {
@@ -56,13 +56,13 @@ public class LifeInsurance {
 		this.paymentMode = paymentMode;
 		this.policyAmount = policyAmount;
 	}
-	
-	//Static Block
-	static{
+
+	// Static Block
+	static {
 		System.out.println("Static Block Called");
 	}
-	
-	//Initialization Block
+
+	// Initialization Block
 	{
 		System.out.println("Initialization Block Called");
 	}
@@ -70,35 +70,36 @@ public class LifeInsurance {
 	@Override
 	public String toString() {
 
-
 		return this.policyNumber + " : " + this.policyHolderName;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 
-		// Checking for Identity	
-		if(this==obj) return true;
-		
-		//Cautious		
-		if(obj==null) return false;
-		
-		//Checking the Type of Object
-		if(this.getClass()!=obj.getClass()) return false;
-		
+		// Checking for Identity
+		if (this == obj)
+			return true;
+
+		// Cautious
+		if (obj == null)
+			return false;
+
+		// Checking the Type of Object
+		if (this.getClass() != obj.getClass())
+			return false;
+
 		// Casting
-		LifeInsurance ins = (LifeInsurance)obj;
+		LifeInsurance ins = (LifeInsurance) obj;
 
 		// Checking the Condition
-		return ((policyNumber==ins.policyNumber) && (policyHolderName.equals(ins.policyHolderName)));
+		return ((policyNumber == ins.policyNumber) && (policyHolderName.equals(ins.policyHolderName)));
 	}
 
 	@Override
 	public int hashCode() {
-		
+
 		long code = this.policyNumber + 7 * policyNumber;
-		return (int)code ;
+		return (int) code;
 	}
 
-	
 }
