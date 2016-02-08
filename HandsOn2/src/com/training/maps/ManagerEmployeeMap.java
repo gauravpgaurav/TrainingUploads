@@ -27,9 +27,9 @@ public class ManagerEmployeeMap {
 
 		for (Map.Entry<String, List<Employee>> words : list) {
 
-			System.out.println("\n Employees Under " + managerId);
+			System.out.println("\n Employees Under ManagerId : " + managerId);
 			for (Employee tempEmp : words.getValue()) {
-				System.out.println("\t Employee : " + tempEmp.getEmployeeName());
+				System.out.println("\t"+tempEmp);
 			}
 
 		}
