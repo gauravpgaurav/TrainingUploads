@@ -12,6 +12,9 @@ public class TranslatorApplication {
 		
 		translateIns.printWords();
 		
+		System.out.println("\nJava 8 -");
+		translateIns.printWordsJ8();
+		
 	}
 
 }

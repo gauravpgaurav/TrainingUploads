@@ -32,4 +32,10 @@ public class TranslateService {
 			System.out.println(words.getKey() + "\t:=\t" + words.getValue());
 		}
 	}
+
+	public void printWordsJ8() {
+		hindiToEnglish.forEach((k, v) -> {
+			System.out.println(k + "\t:=\t"+v);
+		});
+	}
 }
