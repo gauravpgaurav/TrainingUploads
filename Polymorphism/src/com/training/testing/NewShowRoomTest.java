@@ -18,9 +18,9 @@ public class NewShowRoomTest {
 
 	NewShowRoom newShowRoom = null;
 	private int key;
-	private Class cls;
+	private Class<Automobileable> cls;
 
-	public NewShowRoomTest(int key, Class cls) {
+	public NewShowRoomTest(int key, Class<Automobileable> cls) {
 		super();
 		this.key = key;
 		this.cls = cls;
@@ -36,7 +36,7 @@ public class NewShowRoomTest {
 
 		Automobileable auto = newShowRoom.getItem(key);
 
-		// assertTrue(auto instanceof Automobile);
+		// assertTrue(auto instanceof Automobileable);
 
 		assertEquals(cls, auto.getClass());
 
