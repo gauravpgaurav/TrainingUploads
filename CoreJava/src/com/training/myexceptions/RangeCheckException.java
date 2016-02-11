@@ -5,6 +5,10 @@ package com.training.myexceptions;
 
 public class RangeCheckException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long handPhone;
 
 	// Mandatory Dependency

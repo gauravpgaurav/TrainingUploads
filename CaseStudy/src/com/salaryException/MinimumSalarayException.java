@@ -2,6 +2,10 @@ package com.salaryException;
 
 public class MinimumSalarayException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private double salary;
 	private double minSalary;
 

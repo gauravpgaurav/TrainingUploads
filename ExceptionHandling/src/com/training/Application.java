@@ -9,7 +9,7 @@ public class Application {
 		double cel2 = 0.0;
 		System.out.println("Celsius value of 45F : " + cel);
 
-		Converter obj2 = new Converter();
+		//Converter obj2 = new Converter();
 		Double far2 = null;
 
 		try {
